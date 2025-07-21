@@ -12,6 +12,8 @@ public class Employee
     public decimal? Salary { get; set; }
     [Required] [EmailAddress] [MaxLength(100)] public string Email { get; set; } = null!;
     [Required] public DateTime HireDate { get; set; }
+    [ForeignKey("Job")] public int JobId { get; set; }
+    [Required] public Job Job { get; set; } = null!;
     [ForeignKey("Department")] public int DepartmentId { get; set; }
     [Required] public Department Department { get; set; } = null!;
 }
