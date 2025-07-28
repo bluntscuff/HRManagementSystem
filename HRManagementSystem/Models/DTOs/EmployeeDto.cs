@@ -15,3 +15,17 @@ public class EmployeeDto
     public string? JobTitle { get; set; }
     public string? DepartmentName { get; set; }
 }
+
+public class JobDto
+{
+    public int JobId { get; set; }
+    public string JobTitle { get; set; } = null!;
+    public string? Description { get; set; }
+}
+
+public class DepartmentDto
+{
+    public int DepartmentId { get; set; }
+    public string DepartmentName { get; set; } = null!;
+    public string Location { get; set; } = null!;
+}
